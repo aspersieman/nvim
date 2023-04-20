@@ -1,4 +1,3 @@
--- TODO:  TEST
 return {
   "folke/todo-comments.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
@@ -7,6 +6,6 @@ return {
   event = "User AstroFile",
   cmd = { "TodoQuickFix" },
   keys = {
-    { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open TODOs in Telescope" },
+    { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "View TODOs" },
   },
 }
