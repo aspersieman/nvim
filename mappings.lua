@@ -22,6 +22,10 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>W"] = { name = "Vimwiki", desc = "Vimwiki" },
+    ["<leader>Ww"] = { "<cmd>VimwikiIndex<cr>", desc = "Index" },
+    ["<leader>Wd"] = { "<cmd>VimwikiMakeDiaryNote<cr>", desc = "Diary note for today" },
+    ["<leader>Wt"] = { "<cmd>VimwikiToggleListItem<cr>", desc = "Toggle todo" },
   },
   t = {
     -- setting a mapping to false will disable it
