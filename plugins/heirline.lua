@@ -2,6 +2,19 @@ return {
   "rebelot/heirline.nvim",
   opts = function(_, opts)
     local status = require "astronvim.utils.status"
+    local VisualModeLineCount = {
+      condition = function() return true end,
+      provider = function()
+        local icon = " 👁 "
+        local isVisualMode = vim.fn.mode():find "[Vv]"
+        if not isVisualMode then return icon .. "0 " end
+        local starts = vim.fn.line "v"
+        local ends = vim.fn.line "."
+        local lines = starts <= ends and ends - starts + 1 or starts - ends + 1
+        return icon .. tostring(lines) .. " "
+      end,
+      hl = { fg = "green", bg = "black", bold = true },
+    }
     opts.statusline = {
       -- statusline
       hl = { fg = "fg", bg = "bg" },
@@ -15,8 +28,8 @@ return {
       status.component.fill(),
       status.component.lsp(),
       status.component.treesitter(),
+      VisualModeLineCount,
       status.component.nav(),
-      -- remove the 2nd mode indicator on the right
     }
 
     -- return the final configuration table
