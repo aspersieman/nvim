@@ -18,6 +18,9 @@ return {
         "html",
       },
     },
+    env_file = {
+      "hurl.env",
+    },
   },
   keys = {
     -- Run API request
