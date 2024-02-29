@@ -1,7 +1,10 @@
+local opts = { noremap = true, silent = true }
 return {
   "fedepujol/move.nvim",
+  opts = opts,
   init = function()
-    local opts = { noremap = true, silent = true }
+    require("move").setup {}
+
     -- Normal-mode commands
     vim.keymap.set("n", "<A-j>", ":MoveLine(1)<CR>", opts)
     vim.keymap.set("n", "<A-k>", ":MoveLine(-1)<CR>", opts)
