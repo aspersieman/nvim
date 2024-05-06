@@ -5,7 +5,7 @@ return {
     local VisualModeLineCount = {
       condition = function() return true end,
       provider = function()
-        local icon = " 👁 "
+        local icon = " 󰆙 "
         local isVisualMode = vim.fn.mode():find "[Vv]"
         if not isVisualMode then return icon .. "0 " end
         local starts = vim.fn.line "v"
@@ -13,7 +13,6 @@ return {
         local lines = starts <= ends and ends - starts + 1 or starts - ends + 1
         return icon .. tostring(lines) .. " "
       end,
-      hl = { fg = "green", bg = "black", bold = true },
     }
     opts.statusline = {
       -- statusline
