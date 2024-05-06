@@ -47,8 +47,6 @@ return {
         ["<leader>H"] = { name = "HurlRunner" },
         ["<leader>HA"] = { "<cmd>HurlRunner<CR>", desc = "Run all" },
         ["<leader>Ha"] = { "<cmd>HurlRunnerAt<CR>", desc = "Run one" },
-        ["<leader>U"] = { name = "Unit tests" },
-        ["<leader>Ug"] = { "<cmd>Telescope gott<CR>", desc = "Golang" },
       },
       v = {
         ["<Leader>ad"] = {
