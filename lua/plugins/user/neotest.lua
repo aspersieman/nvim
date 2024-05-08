@@ -2,16 +2,14 @@ return {
   {
     "nvim-neotest/neotest",
     dependencies = {
-      "fredrikaverpil/neotest-golang", -- Installation
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim",
+      "fredrikaverpil/neotest-golang", -- Installation
     },
-    event = "VeryLazy",
-    opts = function(_, opts)
-      opts.adapters = opts.adapters or {}
-      opts.adapters["neotest-golang"] = {
-        args = {
+    config = function()
+      local c = { -- Specify configuration
+        go_test_args = {
           "-v",
           "-race",
           "-count=1",
@@ -19,33 +17,11 @@ return {
           "-coverprofile=" .. vim.fn.getcwd() .. "/coverage.out",
         },
       }
-    end,
-    config = function(_, opts)
-      if opts.adapters then
-        local adapters = {}
-        for name, config in pairs(opts.adapters or {}) do
-          if type(name) == "number" then
-            if type(config) == "string" then config = require(config) end
-            adapters[#adapters + 1] = config
-          elseif config ~= false then
-            local adapter = require(name)
-            if type(config) == "table" and not vim.tbl_isempty(config) then
-              local meta = getmetatable(adapter)
-              if adapter.setup then
-                adapter.setup(config)
-              elseif meta and meta.__call then
-                adapter(config)
-              else
-                error("Adapter " .. name .. " does not support setup")
-              end
-            end
-            adapters[#adapters + 1] = adapter
-          end
-        end
-        opts.adapters = adapters
-      end
-
-      require("neotest").setup(opts)
+      require("neotest").setup {
+        adapters = {
+          require "neotest-golang"(c), -- Registration
+        },
+      }
     end,
     keys = {
       { "<leader>U", desc = "Unit tests" },

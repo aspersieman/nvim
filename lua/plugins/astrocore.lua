@@ -41,10 +41,10 @@ return {
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
       n = {
-        ["<leader>D"] = { name = "DB" },
+        ["<leader>D"] = { name = " DB" },
         ["<leader>Du"] = { "<cmd>DBUI<CR>", desc = "UI" },
         ["<Leader>Da"] = { "<cmd>DBUIAddConnection<CR>", desc = "Add Connection" },
-        ["<leader>H"] = { name = "HurlRunner" },
+        ["<leader>H"] = { name = "󱂛 HurlRunner" },
         ["<leader>HA"] = { "<cmd>HurlRunner<CR>", desc = "Run all" },
         ["<leader>Ha"] = { "<cmd>HurlRunnerAt<CR>", desc = "Run one" },
       },
