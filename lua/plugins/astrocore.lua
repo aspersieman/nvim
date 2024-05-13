@@ -47,6 +47,8 @@ return {
         ["<leader>H"] = { name = "󱂛 HurlRunner" },
         ["<leader>HA"] = { "<cmd>HurlRunner<CR>", desc = "Run all" },
         ["<leader>Ha"] = { "<cmd>HurlRunnerAt<CR>", desc = "Run one" },
+        ["<leader>G"] = { name = "󰛔 Grug Search" },
+        ["<leader>Gs"] = { "<cmd>GrugFar<CR>", desc = "Search and Replace" },
       },
       v = {
         ["<Leader>ad"] = {
