@@ -41,14 +41,18 @@ return {
     -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
     mappings = {
       n = {
-        ["<leader>D"] = { name = " DB" },
-        ["<leader>Du"] = { "<cmd>DBUI<CR>", desc = "UI" },
-        ["<Leader>Da"] = { "<cmd>DBUIAddConnection<CR>", desc = "Add Connection" },
-        ["<leader>H"] = { name = "󱂛 HurlRunner" },
-        ["<leader>HA"] = { "<cmd>HurlRunner<CR>", desc = "Run all" },
-        ["<leader>Ha"] = { "<cmd>HurlRunnerAt<CR>", desc = "Run one" },
-        ["<leader>G"] = { name = "󰛔 Grug Search" },
-        ["<leader>Gs"] = { "<cmd>GrugFar<CR>", desc = "Search and Replace" },
+        ["<Leader>D"] = { name = " DB" },
+        ["<Leader>Du"] = { "<cmd>DBUI<CR>", desc = "UI" },
+        ["<leader>Da"] = { "<cmd>DBUIAddConnection<CR>", desc = "Add Connection" },
+        ["<Leader>H"] = { name = "󱂛 HurlRunner" },
+        ["<Leader>HA"] = { "<cmd>HurlRunner<CR>", desc = "Run all" },
+        ["<Leader>Ha"] = { "<cmd>HurlRunnerAt<CR>", desc = "Run one" },
+        ["<Leader>G"] = { name = "󰛔 Grug Search" },
+        ["<Leader>Gs"] = { "<cmd>GrugFar<CR>", desc = "Search and Replace" },
+        ["<Leader>W"] = { name = " Wiki" },
+        ["<Leader>Ww"] = { "<cmd>VimwikiIndex<CR>", desc = "Index" },
+        ["<Leader>Wd"] = { "<cmd>VimwikiMakeDiaryNote<CR>", desc = "Today Note" },
+        ["<Leader>Wt"] = { "<cmd>VimwikiMakeTomorrowDiaryNote<CR>", desc = "Tomorrow Note" },
       },
       v = {
         ["<Leader>ad"] = {
