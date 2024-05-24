@@ -54,6 +54,7 @@ return {
         ["<Leader>Wd"] = { "<cmd>VimwikiMakeDiaryNote<CR>", desc = "Today Note" },
         ["<Leader>Wt"] = { "<cmd>VimwikiMakeTomorrowDiaryNote<CR>", desc = "Tomorrow Note" },
         ["<Leader>Wc"] = { "<cmd>VimwikiToggleListItem<CR>", desc = "Toggle Checkbox" },
+        ["<Leader>gn"] = { "<cmd>Neogit<CR>", desc = "Neogit" },
       },
       v = {
         ["<Leader>ad"] = {
