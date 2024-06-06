@@ -55,6 +55,18 @@ return {
         ["<Leader>Wt"] = { "<cmd>VimwikiMakeTomorrowDiaryNote<CR>", desc = "Tomorrow Note" },
         ["<Leader>Wc"] = { "<cmd>VimwikiToggleListItem<CR>", desc = "Toggle Checkbox" },
         ["<Leader>gn"] = { "<cmd>Neogit<CR>", desc = "Neogit" },
+
+        ["<Leader>ts"] = {
+          function()
+            local Terminal = require("toggleterm.terminal").Terminal
+            local shellCommand = "bash"
+            if vim.loop.os_uname().sysname == "Windows_NT" then shellCommand = "powershell" end
+            local custom_term = Terminal:new { cmd = shellCommand, hidden = true, direction = "horizontal" }
+
+            custom_term:toggle()
+          end,
+          desc = "Separate terminal",
+        },
       },
       v = {
         ["<Leader>ad"] = {
