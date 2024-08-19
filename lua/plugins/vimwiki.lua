@@ -5,7 +5,7 @@ return {
       {
         path = "~/Dropbox/configuration/vimwiki/",
         syntax = "markdown",
-        ext = ".wiki",
+        ext = ".md",
         custom_wiki2html = "$HOME/bin/customwiki2html.sh",
       },
     }
