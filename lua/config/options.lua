@@ -15,3 +15,16 @@ if vim.fn.has("win32") == 1 then
     vim.opt[option] = value
   end
 end
+
+-- Fix inlay hint error messages bug
+vim.api.nvim_create_autocmd("BufEnter", {
+  group = vim.api.nvim_create_augroup("Hints_vue", { clear = true }),
+  desc = "Disable hints for Vue/Typescript",
+  pattern = { "*.vue", "*.ts", "*.js" },
+  callback = function(ev)
+    vim.schedule(function()
+      vim.lsp.inlay_hint.enable(false)
+      -- vim.lsp.inlay_hint.enable(false, { bufnr = ev.buf })
+    end)
+  end,
+})
