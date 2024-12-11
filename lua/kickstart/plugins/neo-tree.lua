@@ -56,6 +56,7 @@ return {
       highlight_background = 'NeoTreeTabInactive',
       highlight_separator = 'NeoTreeTabSeparatorInactive',
       highlight_separator_active = 'NeoTreeTabSeparatorActive',
+      enable_git_status = false, -- https://github.com/nvim-neo-tree/neo-tree.nvim/issues/1548
     },
     open_files_do_not_replace_types = { 'terminal', 'Trouble', 'trouble', 'qf', 'Outline' },
     filesystem = {
