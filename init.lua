@@ -196,7 +196,7 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Buffers
-vim.keymap.set('n', '<leader>bd', '<cmd>Neotree close<CR><cmd>bd<CR>', { desc = 'Delete current buffer' })
+-- vim.keymap.set('n', '<leader>bd', '<cmd>Neotree close<CR><cmd>bd<CR>', { desc = 'Delete current buffer' })
 
 -- Diagnostic
 local diagnostic_goto = function(next, severity)
@@ -955,7 +955,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  require 'kickstart.plugins.neo-tree',
+  -- require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
