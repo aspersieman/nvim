@@ -14,6 +14,7 @@ return {
   opts = {
     win_options = {
       winbar = '%!v:lua.get_oil_winbar()',
+      signcolumn = 'yes:2',
     },
     view_options = {
       -- Show files and directories that start with "."
