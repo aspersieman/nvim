@@ -10,18 +10,28 @@ return {
   config = true,
   keys = {
     {
-      "<leader>gn",
-      desc = "Neogit",
+      "<leader>g",
+      desc = "Git",
     },
     {
-      "<leader>gno",
+      "<leader>gdh",
+      "<cmd>:DiffviewFileHistory %<cr>",
+      desc = "Diff File History",
+    },
+    {
+      "<leader>gdc",
+      "<cmd>:DiffviewClose %<cr>",
+      desc = "Diff Close",
+    },
+    {
+      "<leader>gn",
       "<cmd>:Neogit<cr>",
-      desc = "Open",
+      desc = "Neogit Open",
     },
     {
       "<leader>gns",
       "<cmd>:Neogit kind=split<cr>",
-      desc = "Split",
+      desc = "Neogit Split",
     },
   },
 }
